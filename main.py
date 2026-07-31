@@ -9,7 +9,6 @@ tasks = [
     {"id": 3, "title": "Finish assignment", "done": True},
 ]
 
-# Defines what a "create task" request body should look like
 class TaskCreate(BaseModel):
     title: str
 
