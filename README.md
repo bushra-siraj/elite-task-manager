@@ -35,6 +35,15 @@
 * **Communication Layer**: HTTP Requests / REST API Architecture
 
 ---
+## 📂 Folder Structure 
+
+| File | Description |
+| :--- | :--- |
+| `app.py` | Streamlit dashboard UI, styling, and state controller |
+| `main.py` | FastAPI server implementation & routing logic |
+| `README.md` | Comprehensive project documentation |
+
+---
 
 ## 🔷 Launch the FastAPI Backend
 
@@ -54,6 +63,6 @@
 
 ---
 
-##**Screen short**: 
+## 📷 Screenshot
 
 <img width="960" height="420" alt="2026-07-31 20_29_37-FastAPI - Swagger UI" src="https://github.com/user-attachments/assets/25f4be79-232e-4f84-9101-761dfcf5bf0e" />
