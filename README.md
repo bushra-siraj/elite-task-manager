@@ -36,6 +36,14 @@
 
 ---
 
+## 🔷 Launch the FastAPI Backend
+
+* **Terminal code**: uvicorn main:app --reload
+* **API Base URL**: http://localhost:8000
+* ***Interactive Swagger UI Docs**: http://localhost:8000/docs
+
+---
+
 ## 👨‍💻 Author Information & Background
 
 * **Name**: Student & Backend Engineering Specialist
@@ -48,4 +56,4 @@
 
 ##**Screen short**: 
 
-![Uploading 2026-07-31 20_29_37-FastAPI - Swagger UI.png…]()
+<img width="960" height="420" alt="2026-07-31 20_29_37-FastAPI - Swagger UI" src="https://github.com/user-attachments/assets/25f4be79-232e-4f84-9101-761dfcf5bf0e" />
