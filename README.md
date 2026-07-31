@@ -36,12 +36,16 @@
 
 ---
 
-## 📂 Project Directory Structure
+## 👨‍💻 Author Information & Background
 
-```text
-elite-task-manager/
-│
-├── main.py          # FastAPI server implementation & routing logic
-├── app.py           # Streamlit dashboard UI, styling, and state controller
-└── README.md        # Comprehensive project documentation
+* **Name**: Student & Backend Engineering Specialist
+* **Specialization**: Data Science, Artificial Intelligence, & Backend Architecture
+* **Current Role**: Backend Engineering Intern at Flexible Flyrank AI
+* **Linkedin**: www.linkedin.com/in/bushrasiraj
+* **Email**: Bushrasiraj586@gmail.com
 
+---
+
+##**Screen short**: 
+
+![Uploading 2026-07-31 20_29_37-FastAPI - Swagger UI.png…]()
