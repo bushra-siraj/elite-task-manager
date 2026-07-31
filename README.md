@@ -45,11 +45,45 @@
 
 ---
 
-## 🔷 Launch the FastAPI Backend
+## 🔷 How to run it
+1. Install dependencies:
+   \`\`\`bash
+   pip install fastapi uvicorn
+   \`\`\`
+2. Run the server:
+   \`\`\`bash
+   uvicorn main:app --reload
+   \`\`\`
+3. Visit `http://localhost:8000/docs` for interactive Swagger UI.
 
-* **Terminal code**: uvicorn main:app --reload
-* **API Base URL**: http://localhost:8000
-* ***Interactive Swagger UI Docs**: http://localhost:8000/docs
+## ◼ Endpoints
+
+| Method | Path            | Description               |
+|--------|-----------------|----------------------------|
+| GET    | /               | API info                  |
+| GET    | /health         | Health check               |
+| GET    | /tasks          | List all tasks             |
+| GET    | /tasks/{id}     | Get a single task          |
+| POST   | /tasks          | Create a new task          |
+| PUT    | /tasks/{id}     | Update a task               |
+| DELETE | /tasks/{id}     | Delete a task               |
+
+## Example request
+
+HTTP/1.1 200 OK
+date: Fri, 31 Jul 2026 18:39:56 GMT
+server: uvicorn
+content-length: 333
+content-type: application/json
+
+[
+  {"id": 1, "title": "Buy milk", "done": false},
+  {"id": 2, "title": "Walk the dog", "done": false},
+  {"id": 3, "title": "Finish assignment", "done": true},
+  {"id": 4, "title": "pay utility bills by Friday", "done": true},
+  {"id": 5, "title": "Back up one important file to a cloud drive.", "done": false},
+  {"id": 6, "title": "Drink 3 large sips of water.", "done": false}
+]
 
 ---
 
