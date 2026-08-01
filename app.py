@@ -113,7 +113,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-API_URL = "elite-task-manager-production.up.railway.app"
+API_URL = "https://elite-task-manager-production.up.railway.app"
 
 # --- Sidebar with Lottie Animation ---
 with st.sidebar:
