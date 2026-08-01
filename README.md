@@ -90,9 +90,9 @@ content-type: application/json
 
 ## 👨‍💻 Author Information & Background
 
-* **Name**: Student & Backend Engineering Specialist
+* **Name**: Bushra Siraj
 * **Specialization**: Data Science, Artificial Intelligence, & Backend Architecture
-* **Current Role**: Backend Engineering Intern at Flexible Flyrank AI
+* **Current Role**: Backend Engineering Intern at Flyrank AI
 * **Linkedin**: www.linkedin.com/in/bushrasiraj
 * **Email**: Bushrasiraj586@gmail.com
 
