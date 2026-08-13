@@ -1,0 +1,12 @@
+[33mfc912fb[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m Stage 4: explored SQLite
+[33m55e5163[m Stage 3: update and delete with SQL
+[33m1765a1e[m Stage 2: insert into database
+[33me128566[m Stage 1: database read endpoints
+[33md42ad79[m Stage 0: create SQLite database
+[33mdfe0ccb[m Stage 6: publish and docs
+[33mcda1dcc[m Stage 5: Swagger UI
+[33mb64c5f6[m Stage 4: full CRUD
+[33m46a0144[m Stage 3: create with validation
+[33md412493[m Stage 2: read endpoints with 404
+[33m77f1cf2[m Stage 1: root and health endpoints, add gitignore
+[33m0dfa491[m Stage 0: hello server
