@@ -30,12 +30,6 @@ init_db()
 
 app = FastAPI()
 
-tasks = [
-    {"id": 1, "title": "Buy milk", "done": False},
-    {"id": 2, "title": "Walk the dog", "done": False},
-    {"id": 3, "title": "Finish assignment", "done": True},
-]
-
 class TaskCreate(BaseModel):
     title: str
 
@@ -92,20 +86,28 @@ def update_task(task_id: int, updated: TaskUpdate):
     if not updated.title.strip():
         raise HTTPException(status_code=400, detail="Title is required")
 
-    for task in tasks:
-        if task["id"] == task_id:
-            task["title"] = updated.title
-            task["done"] = updated.done
-            return task
+    conn = get_connection()
+    cursor = conn.execute(
+        "UPDATE tasks SET title = ?, done = ? WHERE id = ?",
+        (updated.title, int(updated.done), task_id)
+    )
+    conn.commit()
 
-    raise HTTPException(status_code=404, detail=f"Task {task_id} not found")
+    if cursor.rowcount == 0:
+        conn.close()
+        raise HTTPException(status_code=404, detail=f"Task {task_id} not found")
+
+    row = conn.execute("SELECT * FROM tasks WHERE id = ?", (task_id,)).fetchone()
+    conn.close()
+    return dict(row)
 
 
 @app.delete("/tasks/{task_id}", status_code=204, description="Delete a task")
 def delete_task(task_id: int):
-    for i, task in enumerate(tasks):
-        if task["id"] == task_id:
-            tasks.pop(i)
-            return
+    conn = get_connection()
+    cursor = conn.execute("DELETE FROM tasks WHERE id = ?", (task_id,))
+    conn.commit()
+    conn.close()
 
-    raise HTTPException(status_code=404, detail=f"Task {task_id} not found")
+    if cursor.rowcount == 0:
+        raise HTTPException(status_code=404, detail=f"Task {task_id} not found")
