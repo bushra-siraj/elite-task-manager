@@ -72,10 +72,16 @@ def create_task(new_task: TaskCreate):
     if not new_task.title.strip():
         raise HTTPException(status_code=400, detail="Title is required")
 
-    next_id = max((t["id"] for t in tasks), default=0) + 1
-    task = {"id": next_id, "title": new_task.title, "done": False}
-    tasks.append(task)
-    return task
+    conn = get_connection()
+    cursor = conn.execute(
+        "INSERT INTO tasks (title, done) VALUES (?, ?)",
+        (new_task.title, 0)
+    )
+    conn.commit()
+    new_id = cursor.lastrowid
+    conn.close()
+
+    return {"id": new_id, "title": new_task.title, "done": False}
 
 class TaskUpdate(BaseModel):
     title: str
